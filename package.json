@@ -1,0 +1,34 @@
+{
+  "name": "projetin",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardSoaresPoltrononieri/projetin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RichardSoaresPoltrononieri/projetin/issues"
+  },
+  "homepage": "https://github.com/RichardSoaresPoltrononieri/projetin#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.500.0",
+    "@fastify/cors": "^11.1.0",
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^17.2.3",
+    "dynamoose": "^4.0.4",
+    "fastify": "^5.6.2",
+    "tsx": "^4.20.6"
+  }
+}
