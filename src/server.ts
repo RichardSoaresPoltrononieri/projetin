@@ -19,7 +19,7 @@ const start = async () => {
     await app.register(routes);
 
     try {
-        await app.listen({ port: 4040, host: '0.0.0.0' })
+        await app.listen({ port: 4040, host: '127.0.0.1' })
 
     } catch (error) {
         app.log.error(error);
