@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.500.0",
+    "@aws-sdk/lib-dynamodb": "^3.939.0",
     "@fastify/cors": "^11.1.0",
     "aws-sdk": "^2.1692.0",
     "dotenv": "^17.2.3",

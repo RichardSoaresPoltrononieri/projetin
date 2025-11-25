@@ -1,23 +1,16 @@
-import type { FastifyReply, FastifyRequest } from "fastify";
-import { deleteCustomerService } from '../services/deleteCustomerService.js';
-
+import type { FastifyRequest, FastifyReply } from 'fastify';
+import { DeleteCustomerService } from '../services/deleteCustomerService.js';
 
 class deleteCustomerController {
-    async handle(request: FastifyRequest, reply: FastifyReply) {
-        try {
-            const { id } = request.query as { id: string}
+  async handle(request: FastifyRequest, reply: FastifyReply) {
+    const { id } = request.query as {id: string};
 
-            const customerService = new deleteCustomerService();
+    const CustomerService = new DeleteCustomerService();
 
-            const customer = await customerService.execute({ id });
+    const customer = await CustomerService.deleteCustomerController({ id });
 
-            return reply.status(200).send(customer);
-        } catch (error) {
-            const err = error as Error;
-            reply.status(400).send({ error: err.message });
-        }
+    return reply.status(200).send(customer);
     }
-
 }
 
 export { deleteCustomerController }
