@@ -10,10 +10,16 @@ class updateCutomerController {
                 email?: string;
                 active?: boolean;
             };
-            
+
+            const payload: any = { id };
+
+            if (name !== undefined) payload.name = name;
+            if (email !== undefined) payload.email = email;
+            if (active !== undefined) payload.active = active;
+
             const customerService = new updateCustomerService();
-            const customer = await customerService.execute({ id, name, email, active });
-            
+            const customer = await customerService.execute(payload);
+
             reply.status(200).send(customer);
 
         } catch (error) {

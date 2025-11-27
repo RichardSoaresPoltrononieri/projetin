@@ -32,8 +32,8 @@ class updateCustomerService {
     if (email !== undefined) updateData.email = email;
     if (active !== undefined) updateData.active = active;
 
-    const updateCustomer = await Customer.update ({ id }, updateData);
-
+     const updateCustomer = await Customer.update({ id, email }, updateData);
+     
     return updateCustomer;
     }
 }
