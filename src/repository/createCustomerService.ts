@@ -1,4 +1,4 @@
-import { Cliente } from '../models/Cliente.js';
+import { Customer } from '../models/customer.js';
 import { randomUUID } from 'crypto';
 
 interface CreateCustomerProps {
@@ -12,7 +12,7 @@ class createCustomerService {
       throw new Error('Preencha todos os campos');
     }
 
-    const newCustomer = await Cliente.create({
+    const newCustomer = await Customer.create({
       id: randomUUID(),
       name,
       email,

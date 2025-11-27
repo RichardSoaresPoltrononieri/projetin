@@ -1,6 +1,6 @@
 import dynamoose from 'dynamoose';
 
-const clienteSchema = new dynamoose.Schema({
+const customerSchema = new dynamoose.Schema({
   id: {
     type: String,
     hashKey: true,
@@ -32,10 +32,10 @@ const clienteSchema = new dynamoose.Schema({
   }
 });
 
-const Cliente = dynamoose.model('Clientes', clienteSchema, {
+const Customer = dynamoose.model('Clientes', customerSchema, {
   tableName: 'Clientes',
   create: false,
   waitForActive: false
 });
 
-export { Cliente };
+export { Customer };

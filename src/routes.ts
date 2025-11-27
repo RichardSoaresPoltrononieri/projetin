@@ -1,13 +1,11 @@
 import type { FastifyInstance, FastifyPluginOptions, FastifyReply, FastifyRequest } from 'fastify';
-import { createCustomerController } from './controllers/createCustomerController.js';
-import { listConsumersController } from './controllers/listCustomersController.js';
-import { deleteCustomerController } from './controllers/deleteCustomerController.js';
+import { createCustomerController } from './serializer/createCustomerController.js';
+import { listConsumersController } from './serializer/listCustomersController.js';
+import { deleteCustomerController } from './serializer/deleteCustomerController.js';
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
-  
-  fastify.get('/test', async (request: FastifyRequest, reply: FastifyReply) => {
-    return { ok: true };
-  });
+
+  console.log('Rotas registradas e iniciadas, servidor inicializado!');
 
   fastify.post('/create-customer', async (request: FastifyRequest, reply: FastifyReply) => {
     return new createCustomerController().handle(request, reply);
@@ -21,5 +19,4 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
     return new deleteCustomerController().handle(request, reply);
   });
   
-  console.log('[Routes] All routes registered');
 }   

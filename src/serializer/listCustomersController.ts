@@ -1,5 +1,5 @@
 import type { FastifyReply, FastifyRequest } from "fastify";
-import { listCustomersService } from '../services/listCustomersService.js';
+import { listCustomersService } from '../repository/listCustomersService.js';
  
 
 class listConsumersController {

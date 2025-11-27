@@ -1,5 +1,5 @@
 import type { FastifyRequest, FastifyReply } from 'fastify';
-import { createCustomerService } from '../services/createCustomerService.js';
+import { createCustomerService } from '../repository/createCustomerService.js';
 
 class createCustomerController {
   async handle(request: FastifyRequest, reply: FastifyReply) {

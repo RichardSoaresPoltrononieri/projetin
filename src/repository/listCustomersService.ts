@@ -1,8 +1,8 @@
-import { Cliente } from '../models/Cliente.js';
+import { Customer } from '../models/customer.js';
 
 class listCustomersService {
     async execute(){
-        const customers = await Cliente.scan().exec();
+        const customers = await Customer.scan().exec();
         return customers;
     }
 }
