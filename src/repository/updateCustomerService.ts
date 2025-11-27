@@ -1,10 +1,10 @@
 import { Customer } from '../models/customer.js';
 
 interface updateCustomerProps {
-    id: string;
-    name?: string;
-    email?: string;
-    active?: boolean;
+  id: string;
+  name?: string | undefined;
+  email?: string | undefined;
+  active?: boolean | undefined;
 }
 
 
