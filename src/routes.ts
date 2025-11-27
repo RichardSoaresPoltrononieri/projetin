@@ -2,7 +2,7 @@ import type { FastifyInstance, FastifyPluginOptions, FastifyReply, FastifyReques
 import { createCustomerController } from './serializer/createCustomerController.js';
 import { listCustomersController } from './serializer/listCustomersController.js';
 import { deleteCustomerController } from './serializer/deleteCustomerController.js';
-import { updateCustomerController } from './serializer/updateCustomerController.js';
+import { updateCutomerController } from './serializer/updateCustomerController.js';
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
 
@@ -17,7 +17,7 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
   });
 
   fastify.put('/customer/:id', async (request: FastifyRequest, reply: FastifyReply) => {
-    return new updateCustomerController().handle(request, reply);
+    return new updateCutomerController().handle(request, reply);
   });
 
   fastify.delete('/customer/:id', async (request: FastifyRequest, reply: FastifyReply) => {

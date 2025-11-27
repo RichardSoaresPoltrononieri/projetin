@@ -1,6 +1,5 @@
 import { Customer } from '../models/customer.js';
 
-
 interface updateCustomerProps {
     id: string;
     name?: string;
@@ -20,7 +19,12 @@ class updateCustomerService {
             throw new Error ('Cliente não encontrado');
         }
     
-    const updateData: any = {
+    const updateData: Partial<{
+        name: string;
+        email: string;
+        active: boolean;
+        updated_at: string;
+    }   > = {
         updated_at: new Date().toISOString()
     };
 
