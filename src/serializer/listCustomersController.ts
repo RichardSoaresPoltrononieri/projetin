@@ -2,7 +2,7 @@ import type { FastifyReply, FastifyRequest } from "fastify";
 import { listCustomersService } from '../repository/listCustomersService.js';
  
 
-class listConsumersController {
+class listCustomersController {
     async handle(request: FastifyRequest, reply: FastifyReply) {
         try {
             const listCustomerService = new listCustomersService();       
@@ -17,4 +17,4 @@ class listConsumersController {
     }
 }
 
-export { listConsumersController };
+export { listCustomersController };
